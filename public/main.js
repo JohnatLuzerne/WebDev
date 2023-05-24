@@ -8,14 +8,7 @@ import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gsta
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
- // Your config info here
- apiKey: "AIzaSyAeFY3h5mZ_39CIE4s-QYCRWvkyU22gSsA",
-  authDomain: "tictactoe5by5-3ca83.firebaseapp.com",
-  databaseURL: "https://tictactoe5by5-3ca83-default-rtdb.firebaseio.com",
-  projectId: "tictactoe5by5-3ca83",
-  storageBucket: "tictactoe5by5-3ca83.appspot.com",
-  messagingSenderId: "1034723225891",
-  appId: "1:1034723225891:web:87b2cca7fec4b267661c96" 
+ // Your config info here 
 };
 
 // Initialize Firebase
