@@ -8,7 +8,11 @@ import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gsta
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
+<<<<<<< HEAD
  // Your config info here
+
+=======
+ // Your config info here 
 
 };
 
