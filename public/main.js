@@ -9,13 +9,7 @@ import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gsta
 // Your web app's Firebase configuration
 const firebaseConfig = {
  // Your config info here
- apiKey: "AIzaSyAeFY3h5mZ_39CIE4s-QYCRWvkyU22gSsA",
-  authDomain: "tictactoe5by5-3ca83.firebaseapp.com",
-  databaseURL: "https://tictactoe5by5-3ca83-default-rtdb.firebaseio.com",
-  projectId: "tictactoe5by5-3ca83",
-  storageBucket: "tictactoe5by5-3ca83.appspot.com",
-  messagingSenderId: "1034723225891",
-  appId: "1:1034723225891:web:87b2cca7fec4b267661c96" 
+
 };
 
 // Initialize Firebase
@@ -208,35 +202,8 @@ function gameLoop() {
     turn: currentTurn,
     board: currentBoard
     }); 
-
-    const occurrences1 = countOccurrencesof1(items);
-    const occurrences2 = countOccurrencesof2(items);
-    if (myPlayerNumber==1) {
-    document.getElementById("myScore").innerHTML = occurrences1;
-    document.getElementById("otherScore").innerHTML = occurrences2;
-    }
-    if (myPlayerNumber==2) {
-    document.getElementById("myScore").innerHTML = occurrences2;
-    document.getElementById("otherScore").innerHTML = occurrences1;
-    }
-    const hasFour1 = hasFourInARow1(items);
-    const hasFour2 = hasFourInARow2(items);
-    if (hasFour1 && myPlayerNumber == 1) {
-      document.getElementById("won4").innerHTML = "You won 4 in a row, game over!"
-      status = "done";
-    }
-     if (hasFour2 && myPlayerNumber == 1) {
-      document.getElementById("won4").innerHTML = "Your oppenent won 4 in a row, game over!"
-       status = "done";
-    }
-    if (hasFour1 && myPlayerNumber == 2) {
-      document.getElementById("won4").innerHTML = "Your oppenent won 4 in a row, game over!"
-       status = "done";
-    }
-     if (hasFour2 && myPlayerNumber == 2) {
-      document.getElementById("won4").innerHTML = "You won 4 in a row, game over!"
-       status = "done";
-    }
+    
+    tallyScore();
 
     }
   }
